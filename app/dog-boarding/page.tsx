@@ -274,30 +274,35 @@ export default function DogBoardingPage() {
             Boarding rates
           </h2>
           <p className="text-charcoal/60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Rates are per dog, per night. Send us an enquiry with your dates and
-            we will provide a personalised quote within 24 hours.
+            Simple, transparent pricing. No hidden fees — the price you see is the price you pay.
           </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="rounded-2xl bg-cream border-2 border-warm-brown/20 p-8 text-center">
+              <p className="text-xs uppercase tracking-widest text-terracotta mb-3">One dog</p>
+              <p className="font-heading text-5xl text-forest mb-1">$55</p>
+              <p className="text-sm text-charcoal/50">per night, incl. GST</p>
+            </div>
+            <div className="rounded-2xl bg-terracotta text-cream p-8 text-center">
+              <p className="text-xs uppercase tracking-widest text-cream/70 mb-3">Two dogs</p>
+              <p className="font-heading text-5xl mb-1">$90</p>
+              <p className="text-sm text-cream/70">per night, incl. GST</p>
+            </div>
+          </div>
+
           <div className="rounded-2xl bg-cream border border-warm-brown/15 p-8 text-left">
             <ul className="flex flex-col gap-3 text-sm text-charcoal/70">
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Nightly rate includes all care, walks, and daily updates</span>
+                <span>All care, walks, and daily photo updates included</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Discounts available for longer stays and repeat bookings</span>
+                <span>No hidden fees — the quoted price is the final price</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Multi-dog discounts for families with more than one dog</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-sage mt-0.5">&#10003;</span>
-                <span>No hidden fees -- the quoted price is the final price</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Peak period rates apply during school holidays and public holidays</span>
+                <span>Peak period rates may apply during school holidays and public holidays</span>
               </li>
             </ul>
           </div>
