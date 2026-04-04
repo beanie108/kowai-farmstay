@@ -23,7 +23,7 @@ export default function HomePage() {
           </p>
 
           <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl text-cream leading-tight">
-            Where farm life meets a warm welcome
+            Where nature and lifestyle meets a warm welcome
           </h1>
 
           <p className="max-w-xl text-lg text-cream/80 leading-relaxed">
