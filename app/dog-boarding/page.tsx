@@ -211,6 +211,55 @@ export default function DogBoardingPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          FEEDING & FOOD
+          ═══════════════════════════════════════════════════ */}
+      <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col gap-5">
+            <p className="text-xs uppercase tracking-[0.25em] text-terracotta">Feeding</p>
+            <h2 className="font-heading text-4xl text-forest leading-snug">
+              We feed only the best
+            </h2>
+            <p className="text-charcoal/70 leading-relaxed">
+              Our pack is fed premium ACANA dry food — one of the highest quality
+              dog food brands available in New Zealand. We rotate between two
+              varieties depending on the season and each dog's needs.
+            </p>
+            <p className="text-charcoal/70 leading-relaxed">
+              If your dog has a specific diet, food sensitivities, or you prefer
+              to bring their own food, that is absolutely fine — we follow your
+              feeding instructions to the letter.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
+            {[
+              {
+                name: "ACANA Highest Protein Pacifica",
+                description: "Wild-caught fish formula — high protein, grain-free, and rich in Omega-3. Great for skin, coat, and energy.",
+                tag: "Fish formula",
+              },
+              {
+                name: "ACANA Classics Prairie Poultry",
+                description: "Free-run chicken, turkey, and eggs — a balanced, digestible everyday recipe that most dogs love.",
+                tag: "Poultry formula",
+              },
+            ].map(({ name, description, tag }) => (
+              <div key={name} className="rounded-2xl bg-cream border border-warm-brown/15 p-6 flex flex-col gap-2">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-heading text-lg text-forest leading-snug">{name}</h3>
+                  <span className="shrink-0 text-xs rounded-full bg-sage/15 text-sage px-3 py-1">{tag}</span>
+                </div>
+                <p className="text-sm text-charcoal/60 leading-relaxed">{description}</p>
+              </div>
+            ))}
+            <p className="text-xs text-charcoal/40 mt-1">
+              All food is served to your dog's regular portion size and schedule.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
           WHAT TO BRING
           ═══════════════════════════════════════════════════ */}
       <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
