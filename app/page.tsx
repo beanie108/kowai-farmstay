@@ -254,7 +254,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {[
               {
                 quote:
@@ -270,6 +270,11 @@ export default function HomePage() {
                 quote:
                   "We've been trusting Ben and Billiejean with our girls for years — even during long stretches of international travel. I couldn't think of anyone in the world I'd rather leave them with. Peanut and Peekaboo are regulars at Kowai Bush and it truly is their second home. They're treated and spoilt as if they were Ben and Billiejean's very own, and they're always incredibly excited to go back. Complete peace of mind, every time.",
                 author: "Erika Sedin",
+              },
+              {
+                quote:
+                  "I leave my long-haired mini dachshund Otto with Billiejean and Ben for weeks at a time when we go on holiday. I was never comfortable with traditional boarding kennels, but at Kowai Bush I knew he would be loved as one of their own. Otto spends his days running the large grounds, sleeping on their bed, and sunning himself on the deck with the pack — I never have to worry that he's lonely. Ben and Billiejean are also incredibly attentive with his medication and quick to notice any health concerns. Their communication is wonderful too — regular updates and photos keep us completely at ease while we're away.",
+                author: "Victoria Tan",
               },
             ].map(({ quote, author }) => (
               <blockquote
