@@ -2,6 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+const pack = [
+  { name: "Lump", bg: "bg-terracotta/10", src: "/images/lump.jpg" },
+  { name: "Beanie", bg: "bg-warm-brown/10", src: null },
+  { name: "Kali", bg: "bg-sage/15", src: null },
+  { name: "Ellie-Mae", bg: "bg-terracotta/8", src: null },
+  { name: "Cub", bg: "bg-sage/10", src: null },
+  { name: "Dax", bg: "bg-forest/10", src: null },
+];
+
 export const metadata: Metadata = {
   title: "Home",
   description:
@@ -160,23 +169,30 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[
-              { name: "Lump", bg: "bg-terracotta/10" },
-              { name: "Beanie", bg: "bg-warm-brown/10" },
-              { name: "Kali", bg: "bg-sage/15" },
-              { name: "Ellie-Mae", bg: "bg-terracotta/8" },
-              { name: "Cub", bg: "bg-sage/10" },
-              { name: "Dax", bg: "bg-forest/10" },
-            ].map(({ name, bg }) => (
+            {pack.map(({ name, bg, src }) => (
               <div
                 key={name}
-                className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2`}
+                className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2 overflow-hidden relative`}
               >
-                {/* TODO: Replace with next/image individual dog photos */}
-                <div className="w-16 h-16 rounded-full bg-white/40" />
-                <span className="text-sm font-medium text-charcoal/70">
-                  {name}
-                </span>
+                {src ? (
+                  <>
+                    <Image
+                      src={src}
+                      alt={name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                    />
+                    <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
+                      {name}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-16 h-16 rounded-full bg-white/40" />
+                    <span className="text-sm font-medium text-charcoal/70">{name}</span>
+                  </>
+                )}
               </div>
             ))}
           </div>
