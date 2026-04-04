@@ -108,14 +108,6 @@ export default function FarmstayPage() {
             )}
           </div>
 
-          <div className="text-center mt-8">
-            <Link
-              href="/animals"
-              className="text-sm font-medium text-terracotta hover:text-warm-brown transition-colors"
-            >
-              Meet all the animals &rarr;
-            </Link>
-          </div>
         </div>
       </section>
 

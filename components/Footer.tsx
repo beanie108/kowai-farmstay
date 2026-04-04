@@ -3,8 +3,6 @@ import Link from "next/link";
 const quickLinks = [
   { label: "Farmstay", href: "/farmstay" },
   { label: "Dog Boarding", href: "/dog-boarding" },
-  { label: "The Farm", href: "/the-farm" },
-  { label: "Animals", href: "/animals" },
   { label: "Gallery", href: "/gallery" },
   { label: "Book Now", href: "/book" },
   { label: "Contact", href: "/contact" },

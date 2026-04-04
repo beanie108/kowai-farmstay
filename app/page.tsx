@@ -171,14 +171,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <Link
-              href="/animals"
-              className="text-sm font-medium text-terracotta hover:text-warm-brown transition-colors"
-            >
-              Meet all the animals &rarr;
-            </Link>
-          </div>
         </div>
       </section>
 

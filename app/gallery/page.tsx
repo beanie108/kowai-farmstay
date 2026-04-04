@@ -134,12 +134,6 @@ export default function GalleryPage() {
             >
               Make an Enquiry
             </Link>
-            <Link
-              href="/animals"
-              className="rounded-full border border-cream/40 px-8 py-3 text-sm font-medium text-cream transition-colors hover:bg-cream/10"
-            >
-              Meet the Animals
-            </Link>
           </div>
         </div>
       </section>
