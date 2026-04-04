@@ -268,8 +268,8 @@ export default function HomePage() {
               },
               {
                 quote:
-                  "Genuine Kiwi hospitality at its finest. The farm is beautiful, the food is amazing, and the hosts make you feel like family from the moment you arrive.",
-                author: "International visitor",
+                  "We've been trusting Ben and Billiejean with our girls for years — even during long stretches of international travel. I couldn't think of anyone in the world I'd rather leave them with. Peanut and Peekaboo are regulars at Kowai Bush and it truly is their second home. They're treated and spoilt as if they were Ben and Billiejean's very own, and they're always incredibly excited to go back. Complete peace of mind, every time.",
+                author: "Erika Sedin",
               },
             ].map(({ quote, author }) => (
               <blockquote
