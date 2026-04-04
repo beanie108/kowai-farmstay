@@ -22,7 +22,7 @@ export default function Footer() {
               Farmstay & Boarding
             </p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-cream/70">
-              A working farm offering unique farmstay accommodation and premium
+              A lifestyle block offering unique farmstay accommodation and premium
               dog boarding in New Zealand.
             </p>
           </div>

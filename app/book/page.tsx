@@ -23,7 +23,7 @@ export default function BookPage() {
             Make an enquiry
           </h1>
           <p className="text-lg text-charcoal/60 leading-relaxed max-w-xl mx-auto">
-            Whether you want to stay on the farm or board your dog, it starts
+            Whether you want to stay on the lifestyle block or board your dog, it starts
             here. Fill in the form below and we will come back to you within
             24 hours with availability and a personalised quote.
           </p>
@@ -44,7 +44,7 @@ export default function BookPage() {
               Farmstay enquiry
             </h2>
             <p className="text-sm text-charcoal/60 leading-relaxed">
-              Interested in staying on the farm? Let us know your dates, how
+              Interested in staying on the lifestyle block? Let us know your dates, how
               many guests, and any special requirements. We will confirm
               availability and send you a personalised quote.
             </p>

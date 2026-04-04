@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Farmstay Accommodation",
   description:
-    "Stay on a real working farm in Canterbury, New Zealand. Wake up to mountain views, meet the animals, and experience genuine Kiwi hospitality at Kowai Farmstay.",
+    "Stay on a real lifestyle block in Canterbury, New Zealand. Wake up to mountain views, meet the animals, and experience genuine Kiwi hospitality at Kowai Farmstay.",
 };
 
 export default function FarmstayPage() {
@@ -29,7 +29,7 @@ export default function FarmstayPage() {
             Accommodation
           </p>
           <h1 className="font-heading text-5xl sm:text-6xl text-cream mb-6 leading-tight">
-            Stay on a real working farm
+            Stay on a real lifestyle block
           </h1>
           <p className="text-lg text-cream/80 max-w-2xl mx-auto leading-relaxed">
             No queues, no room service, no mini bar. Just wide open space,
@@ -65,7 +65,7 @@ export default function FarmstayPage() {
             <div className="flex flex-col gap-4 text-charcoal/70 leading-relaxed">
               <p>
                 Kowai Farmstay is not a hotel pretending to be rural. It is a
-                genuine working farm where you wake up to birdsong, the Southern
+                genuine lifestyle block where you wake up to birdsong, the Southern
                 Alps catch the morning light, and there is always an animal
                 waiting to say hello.
               </p>
@@ -130,7 +130,7 @@ export default function FarmstayPage() {
             What is included
           </h2>
           <p className="mt-4 text-charcoal/60 max-w-lg mx-auto">
-            Everything you need for a genuine farm experience, nothing you do
+            Everything you need for a genuine lifestyle block experience, nothing you do
             not.
           </p>
         </div>
@@ -147,7 +147,7 @@ export default function FarmstayPage() {
             },
             {
               title: "Farm activities",
-              body: "Feed the animals, collect eggs, help with the morning routine, or take a farm walk. Get involved as much or as little as you want.",
+              body: "Feed the animals, collect eggs, help with the morning routine, or take a walk around the lifestyle block. Get involved as much or as little as you want.",
             },
             {
               title: "Dogs welcome",
@@ -297,7 +297,7 @@ export default function FarmstayPage() {
       <section className="bg-forest text-cream py-20 px-4">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-4xl sm:text-5xl mb-4">
-            Ready to stay on the farm?
+            Ready to stay on the lifestyle block?
           </h2>
           <p className="text-cream/70 mb-8 max-w-lg mx-auto leading-relaxed">
             Send us an enquiry with your dates and we will get back to you

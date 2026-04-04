@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | Kowai Farmstay & Boarding",
   },
   description:
-    "Escape to Kowai — a working farm offering unique farmstay accommodation and premium dog boarding in New Zealand. Book your stay or your dog's home away from home.",
+    "Escape to Kowai — a lifestyle block offering unique farmstay accommodation and premium dog boarding in New Zealand. Book your stay or your dog's home away from home.",
   metadataBase: new URL("https://kowaifarmstay.co.nz"),
   openGraph: {
     type: "website",

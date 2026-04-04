@@ -24,7 +24,7 @@ export default function DogBoardingPage() {
             A farm holiday for your dog
           </h1>
           <p className="text-lg text-cream/80 max-w-2xl mx-auto leading-relaxed">
-            Your dog does not get locked in a kennel. They get a farm. Space to
+            Your dog does not get locked in a kennel. They get a lifestyle block. Space to
             run, fresh Canterbury air, and a pack of miniature dachshunds to
             play with. This is dog boarding the way it should be.
           </p>
@@ -48,11 +48,11 @@ export default function DogBoardingPage() {
                 Most boarding facilities are built for volume. Dogs in cages,
                 limited outdoor time, staff who barely know your dog&apos;s name.
                 That is not us. At Kowai, your dog stays in our home, on a
-                working farm, as part of our pack.
+                lifestyle block, as part of our pack.
               </p>
               <p>
                 We are a family of miniature dachshund lovers. Our own sausage
-                dogs live here on the farm, and your dog joins right in with
+                dogs live here on the lifestyle block, and your dog joins right in with
                 them. They sleep inside, they eat on schedule, they go on farm
                 walks, and they get the kind of attention that only comes from
                 genuine dog people who actually enjoy having them around.
@@ -403,7 +403,7 @@ export default function DogBoardingPage() {
       <section className="bg-terracotta py-20 px-4 text-center text-cream">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-heading text-4xl sm:text-5xl mb-4">
-            Give your dog the farm holiday they deserve
+            Give your dog the lifestyle block holiday they deserve
           </h2>
           <p className="text-cream/80 max-w-lg mx-auto mb-8 leading-relaxed">
             Spots are limited. Send us an enquiry with your dates and your

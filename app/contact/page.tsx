@@ -22,7 +22,7 @@ export default function ContactPage() {
             Get in touch
           </h1>
           <p className="text-lg text-charcoal/60 leading-relaxed max-w-xl mx-auto">
-            Questions about the farmstay, dog boarding, or the farm in general?
+            Questions about the farmstay, dog boarding, or the lifestyle block in general?
             We are happy to help. Reach out and we will get back to you.
           </p>
         </div>
@@ -129,8 +129,8 @@ export default function ContactPage() {
                   a: "Approximately one hour's drive from central Christchurch, through some of Canterbury's most beautiful countryside.",
                 },
                 {
-                  q: "Can I visit the farm before booking?",
-                  a: "If you would like to see the farm before committing to a farmstay or boarding booking, get in touch and we can arrange a visit.",
+                  q: "Can I visit the lifestyle block before booking?",
+                  a: "If you would like to see the lifestyle block before committing to a farmstay or boarding booking, get in touch and we can arrange a visit.",
                 },
                 {
                   q: "Do you have phone contact?",

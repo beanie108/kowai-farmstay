@@ -220,8 +220,8 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
-              title: "Genuine farm experience",
-              body: "This is not a theme park or a resort. Kowai is a real working farm where you get to be part of the daily rhythm.",
+              title: "Genuine lifestyle block experience",
+              body: "This is not a theme park or a resort. Kowai is a real lifestyle block where you get to be part of the daily rhythm.",
             },
             {
               title: "Personal, not commercial",
