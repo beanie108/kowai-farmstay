@@ -155,25 +155,24 @@ export default function HomePage() {
               Meet the locals
             </h2>
             <p className="mt-4 text-charcoal/60 max-w-lg mx-auto">
-              Miniature dachshunds, sheep, goats, cows, alpacas, and chickens.
-              There is always someone to meet at Kowai.
+              Meet Lump, Beanie, Kali, Ellie-Mae, Cub and Dax — the heart of the pack at Kowai.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { name: "Dachshunds", bg: "bg-terracotta/10" },
-              { name: "Sheep", bg: "bg-sage/15" },
-              { name: "Goats", bg: "bg-warm-brown/10" },
-              { name: "Cows", bg: "bg-forest/10" },
-              { name: "Alpacas", bg: "bg-sage/10" },
-              { name: "Chickens", bg: "bg-terracotta/8" },
+              { name: "Lump", bg: "bg-terracotta/10" },
+              { name: "Beanie", bg: "bg-warm-brown/10" },
+              { name: "Kali", bg: "bg-sage/15" },
+              { name: "Ellie-Mae", bg: "bg-terracotta/8" },
+              { name: "Cub", bg: "bg-sage/10" },
+              { name: "Dax", bg: "bg-forest/10" },
             ].map(({ name, bg }) => (
               <div
                 key={name}
                 className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2`}
               >
-                {/* TODO: Replace with next/image animal photos */}
+                {/* TODO: Replace with next/image individual dog photos */}
                 <div className="w-16 h-16 rounded-full bg-white/40" />
                 <span className="text-sm font-medium text-charcoal/70">
                   {name}
