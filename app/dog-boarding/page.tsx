@@ -99,8 +99,8 @@ export default function DogBoardingPage() {
                 body: "We know the stubbornness, the drama, the burrowing under blankets, and the absolute need to be the centre of attention. Your dachshund will feel right at home.",
               },
               {
-                title: "Back-safe environment",
-                body: "Dachshunds need care around their spines. Our home and farm are set up to minimise jumping risks, with ramps and low furniture where it matters.",
+                title: "Ramps everywhere that matter",
+                body: "We promote ramp access throughout our home — onto couches, beds, the deck, and more. Your dachshund gets full access without the jump.",
               },
               {
                 title: "Pack socialisation",
