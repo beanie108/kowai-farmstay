@@ -29,7 +29,7 @@ export default function FarmstayPage() {
             Accommodation
           </p>
           <h1 className="font-heading text-5xl sm:text-6xl text-cream mb-6 leading-tight">
-            Stay on a real lifestyle block
+            Experience the rural lifestyle
           </h1>
           <p className="text-lg text-cream/80 max-w-2xl mx-auto leading-relaxed">
             No queues, no room service, no mini bar. Just wide open space,
