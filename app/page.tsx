@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -103,9 +104,14 @@ export default function HomePage() {
 
           {/* Dog boarding card */}
           <div className="group rounded-2xl bg-terracotta/8 p-10 flex flex-col gap-5 transition-shadow hover:shadow-md">
-            {/* TODO: Replace with next/image */}
-            <div className="rounded-xl bg-terracotta/10 aspect-[16/9] flex items-center justify-center text-terracotta/30 text-sm">
-              Dog boarding photo
+            <div className="relative rounded-xl overflow-hidden aspect-[16/9]">
+              <Image
+                src="/images/dogs.jpg"
+                alt="Four miniature dachshunds looking up at their owner at Kowai Farmstay"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <h3 className="font-heading text-2xl text-forest">
               Bespoke Dog Boarding
