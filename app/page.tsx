@@ -263,8 +263,8 @@ export default function HomePage() {
               },
               {
                 quote:
-                  "Our dachshund came home exhausted and happy. The daily photo updates gave us complete peace of mind. We would not board anywhere else.",
-                author: "Dog boarding client",
+                  "Oh my goodness — sausage heaven! Our little Mini lives her absolute best life with Ben and Billiejean. She comes home looking a million bucks and, as an added bonus, often a kilo or so lighter from all the pack patrols! As usually the smallest one there, she is so well looked after. We couldn't recommend them more.",
+                author: "Olivia Panther",
               },
               {
                 quote:
