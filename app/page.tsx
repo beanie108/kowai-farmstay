@@ -1,65 +1,111 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Escape to Kowai — farmstay accommodation and dog boarding on a working New Zealand farm. Book your stay or your dog's home away from home.",
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Hero */}
+      <section className="relative flex min-h-[90vh] flex-col items-center justify-center bg-forest px-4 text-center text-cream">
+        {/* Placeholder for hero image — replace bg-forest with a next/image background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/80 to-forest/95" />
+        <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">
+          <p className="text-xs uppercase tracking-[0.25em] text-sage">
+            Canterbury, New Zealand
+          </p>
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl text-cream">
+            Life is better on the farm.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="max-w-xl text-lg text-cream/80 leading-relaxed">
+            Unique farmstay accommodation and premium dog boarding on a working
+            New Zealand farm. Come stay — or leave your dog with us.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 mt-2">
+            <Link
+              href="/farmstay"
+              className="rounded-full bg-terracotta px-7 py-3 text-sm font-medium text-cream shadow transition-colors hover:bg-warm-brown"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Explore Farmstay
+            </Link>
+            <Link
+              href="/dog-boarding"
+              className="rounded-full border border-cream/40 px-7 py-3 text-sm font-medium text-cream transition-colors hover:bg-cream/10"
             >
-              Learning
-            </a>{" "}
-            center.
+              Dog Boarding
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services overview */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-4xl text-forest">
+            Two ways to experience Kowai
+          </h2>
+          <p className="mt-3 text-warm-brown">
+            Farmstay for you. Boarding for your dog.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {/* Farmstay card */}
+          <div className="rounded-2xl bg-sage/10 p-8 flex flex-col gap-4">
+            <span className="text-3xl">🏡</span>
+            <h3 className="font-heading text-2xl text-forest">
+              Farmstay Accommodation
+            </h3>
+            <p className="text-charcoal/80 leading-relaxed">
+              Wake up to birdsong, roll your sleeves up, and experience genuine
+              New Zealand farm life. Comfortable rooms, home-cooked meals, and
+              wide open space.
+            </p>
+            <Link
+              href="/farmstay"
+              className="mt-auto self-start text-sm font-medium text-terracotta hover:text-warm-brown transition-colors"
+            >
+              Learn more &rarr;
+            </Link>
+          </div>
+          {/* Dog boarding card */}
+          <div className="rounded-2xl bg-terracotta/10 p-8 flex flex-col gap-4">
+            <span className="text-3xl">🐾</span>
+            <h3 className="font-heading text-2xl text-forest">
+              Premium Dog Boarding
+            </h3>
+            <p className="text-charcoal/80 leading-relaxed">
+              Your dog gets space to run, fresh air, and genuine care — not a
+              kennel. They stay as part of the farm family while you&apos;re away.
+            </p>
+            <Link
+              href="/dog-boarding"
+              className="mt-auto self-start text-sm font-medium text-terracotta hover:text-warm-brown transition-colors"
+            >
+              Learn more &rarr;
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CTA strip */}
+      <section className="bg-terracotta py-16 px-4 text-center text-cream">
+        <h2 className="font-heading text-3xl sm:text-4xl">
+          Ready to book?
+        </h2>
+        <p className="mt-3 text-cream/80 max-w-md mx-auto">
+          Enquire now and we&apos;ll get back to you within 24 hours.
+        </p>
+        <Link
+          href="/book"
+          className="mt-6 inline-block rounded-full bg-cream px-8 py-3 text-sm font-medium text-terracotta shadow transition-colors hover:bg-cream/90"
+        >
+          Make an Enquiry
+        </Link>
+      </section>
+    </>
   );
 }
