@@ -257,33 +257,57 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {[
               {
-                quote:
+                paragraphs: [
                   "I can confirm I am 100% relaxed leaving my fur babies in B and B's care. They are both incredibly knowledgeable and passionate about the breed, and their home at Kowai Bush is a secure, welcoming, and exciting environment for the wee dachshunds. My incredibly needy, anxiety-ridden little man Tytan absolutely loves visiting his Aunty Billiejean, Uncle Ben, and all his extended furry whānau. 100/10 would recommend.",
+                ],
                 author: "Kim Smith",
+                tag: "Dog Boarding",
               },
               {
-                quote:
+                paragraphs: [
                   "Oh my goodness — sausage heaven! Our little Mini lives her absolute best life with Ben and Billiejean. She comes home looking a million bucks and, as an added bonus, often a kilo or so lighter from all the pack patrols! As usually the smallest one there, she is so well looked after. We couldn't recommend them more.",
+                ],
                 author: "Olivia Panther",
+                tag: "Dog Boarding",
               },
               {
-                quote:
+                paragraphs: [
                   "We've been trusting Ben and Billiejean with our girls for years — even during long stretches of international travel. I couldn't think of anyone in the world I'd rather leave them with. Peanut and Peekaboo are regulars at Kowai Bush and it truly is their second home. They're treated and spoilt as if they were Ben and Billiejean's very own, and they're always incredibly excited to go back. Complete peace of mind, every time.",
+                ],
                 author: "Erika Sedin",
+                tag: "Dog Boarding",
               },
               {
-                quote:
+                paragraphs: [
                   "I leave my long-haired mini dachshund Otto with Billiejean and Ben for weeks at a time when we go on holiday. I was never comfortable with traditional boarding kennels, but at Kowai Bush I knew he would be loved as one of their own. Otto spends his days running the large grounds, sleeping on their bed, and sunning himself on the deck with the pack — I never have to worry that he's lonely. Ben and Billiejean are also incredibly attentive with his medication and quick to notice any health concerns. Their communication is wonderful too — regular updates and photos keep us completely at ease while we're away.",
+                ],
                 author: "Victoria Tan",
+                tag: "Dog Boarding",
               },
-            ].map(({ quote, author }) => (
+              {
+                paragraphs: [
+                  "I cannot recommend this place highly enough. From the moment I arrived, I was welcomed into a warm and incredibly kind family environment. It truly felt like a home away from home.",
+                  "One of the highlights of my stay was talking with Ben. He has an incredible wealth of knowledge on so many subjects — whether it's animals, machinery, plants, or even geology (rocks!). I learned something new and fascinating every day.",
+                  "The food was another highlight. Both Ben and his wife are fantastic cooks. Every single meal they prepared was delicious and made with care. You certainly won't go hungry here!",
+                  "As an animal lover, I was deeply moved by their connection to nature. Their dogs and other animals are so gentle and well-behaved. It's clear that this is because of Ben's big heart — he rescues and cares for many animals that came from difficult backgrounds, giving them a safe and loving home.",
+                  "This is a safe, educational, and heartwarming environment for anyone, especially families.",
+                ],
+                author: "S.T — Japan 🇯🇵",
+                tag: "Farmstay",
+              },
+            ].map(({ paragraphs, author, tag }) => (
               <blockquote
                 key={author}
                 className="rounded-2xl bg-cream border border-warm-brown/15 p-8 flex flex-col gap-4"
               >
-                <p className="text-charcoal/70 leading-relaxed italic text-sm">
-                  &ldquo;{quote}&rdquo;
-                </p>
+                <span className="text-xs uppercase tracking-widest text-terracotta font-medium">{tag}</span>
+                <div className="flex flex-col gap-3">
+                  {paragraphs.map((p, i) => (
+                    <p key={i} className="text-charcoal/70 leading-relaxed italic text-sm">
+                      {i === 0 && <>&ldquo;</>}{p}{i === paragraphs.length - 1 && <>&rdquo;</>}
+                    </p>
+                  ))}
+                </div>
                 <footer className="mt-auto text-xs text-warm-brown font-medium">
                   &mdash; {author}
                 </footer>
