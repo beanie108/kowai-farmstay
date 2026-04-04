@@ -7,7 +7,7 @@ const pack = [
   { name: "Beanie", bg: "bg-warm-brown/10", src: null },
   { name: "Kali", bg: "bg-sage/15", src: null },
   { name: "Ellie-Mae", bg: "bg-terracotta/8", src: null },
-  { name: "Cub", bg: "bg-sage/10", src: null },
+  { name: "Cub", bg: "bg-sage/10", src: "/images/cub.jpg" },
   { name: "Dax", bg: "bg-forest/10", src: null },
 ];
 
