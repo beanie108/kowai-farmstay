@@ -76,9 +76,14 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Farmstay card */}
           <div className="group rounded-2xl bg-sage/10 p-10 flex flex-col gap-5 transition-shadow hover:shadow-md">
-            {/* TODO: Replace with next/image */}
-            <div className="rounded-xl bg-sage/20 aspect-[16/9] flex items-center justify-center text-sage/40 text-sm">
-              Farmstay photo
+            <div className="relative rounded-xl overflow-hidden aspect-[16/9]">
+              <Image
+                src="/images/farmstay.jpg"
+                alt="Aerial view of Kowai Farmstay surrounded by gardens and Canterbury mountain ranges"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <h3 className="font-heading text-2xl text-forest">
               Farmstay Accommodation
