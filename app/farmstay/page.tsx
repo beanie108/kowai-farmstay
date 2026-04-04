@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
+import { farmstayBookings } from "@/data/availability";
 
 export const metadata: Metadata = {
   title: "Farmstay Accommodation",
@@ -258,36 +260,10 @@ export default function FarmstayPage() {
             preferred dates and we will confirm within 24 hours.
           </p>
 
-          {/* Microsoft 365 Calendar Embed
-              HOW TO SET UP:
-              1. Open Outlook on the web (outlook.office.com)
-              2. Go to Calendar
-              3. Click the gear icon > View all Outlook settings
-              4. Go to Calendar > Shared calendars
-              5. Under "Publish a calendar", select the calendar and set permissions to
-                 "Can view all details" (or "Can view when I'm busy" for privacy)
-              6. Click "Publish" and copy the HTML embed link
-              7. Replace the src="about:blank" below with your embed URL
-          */}
-          <div className="rounded-xl overflow-hidden border border-warm-brown/10 bg-white">
-            <iframe
-              src="about:blank"
-              title="Farmstay availability calendar"
-              className="w-full"
-              style={{ height: "600px", border: "none" }}
-              aria-label="Farmstay availability calendar"
-            />
-          </div>
-          <p className="mt-4 text-xs text-charcoal/40">
-            Calendar powered by Microsoft 365. If the calendar does not load,{" "}
-            <a
-              href="mailto:stay@kowaifarmstay.co.nz"
-              className="underline hover:text-terracotta"
-            >
-              contact us directly
-            </a>
-            .
-          </p>
+          <AvailabilityCalendar
+            bookedRanges={farmstayBookings}
+            label="Farmstay availability"
+          />
         </div>
       </section>
 

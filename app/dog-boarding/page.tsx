@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
+import { dogBoardingBookings } from "@/data/availability";
 
 export const metadata: Metadata = {
   title: "Dog Boarding",
@@ -374,37 +376,10 @@ export default function DogBoardingPage() {
             available dates below, then send an enquiry to secure your spot.
           </p>
 
-          {/* Microsoft 365 Calendar Embed
-              HOW TO SET UP:
-              1. Open Outlook on the web (outlook.office.com)
-              2. Go to Calendar
-              3. Click the gear icon > View all Outlook settings
-              4. Go to Calendar > Shared calendars
-              5. Under "Publish a calendar", select your dog boarding calendar
-              6. Set permissions to "Can view when I'm busy" for privacy
-              7. Click "Publish" and copy the HTML embed link
-              8. Replace the src="about:blank" below with your embed URL
-              TIP: Use a SEPARATE calendar from the farmstay calendar
-          */}
-          <div className="rounded-xl overflow-hidden border border-warm-brown/10 bg-white">
-            <iframe
-              src="about:blank"
-              title="Dog boarding availability calendar"
-              className="w-full"
-              style={{ height: "600px", border: "none" }}
-              aria-label="Dog boarding availability calendar"
-            />
-          </div>
-          <p className="mt-4 text-xs text-charcoal/40">
-            Calendar powered by Microsoft 365. If the calendar does not load,{" "}
-            <a
-              href="mailto:stay@kowaifarmstay.co.nz"
-              className="underline hover:text-terracotta"
-            >
-              contact us directly
-            </a>
-            .
-          </p>
+          <AvailabilityCalendar
+            bookedRanges={dogBoardingBookings}
+            label="Dog boarding availability"
+          />
         </div>
       </section>
 
