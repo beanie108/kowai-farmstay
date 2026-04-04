@@ -233,10 +233,6 @@ export default function FarmstayPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Children under 5 stay free</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-sage mt-0.5">&#10003;</span>
                 <span>Dogs may incur an additional charge — ask when enquiring</span>
               </li>
               <li className="flex items-start gap-3">
