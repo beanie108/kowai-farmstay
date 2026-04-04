@@ -258,8 +258,8 @@ export default function HomePage() {
             {[
               {
                 quote:
-                  "We did not want to leave. The kids loved feeding the animals every morning and the accommodation was so comfortable. A truly special place.",
-                author: "Recent farmstay guest",
+                  "I can confirm I am 100% relaxed leaving my fur babies in B and B's care. They are both incredibly knowledgeable and passionate about the breed, and their home at Kowai Bush is a secure, welcoming, and exciting environment for the wee dachshunds. My incredibly needy, anxiety-ridden little man Tytan absolutely loves visiting his Aunty Billiejean, Uncle Ben, and all his extended furry whānau. 100/10 would recommend.",
+                author: "Kim Smith",
               },
               {
                 quote:
