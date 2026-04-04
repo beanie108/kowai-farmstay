@@ -152,10 +152,6 @@ export default function FarmstayPage() {
               body: "Feed the animals, collect eggs, help with the morning routine, or take a walk around the lifestyle block. Get involved as much or as little as you want.",
             },
             {
-              title: "Dogs welcome",
-              body: "Travelling with your dog? Well-behaved dogs are welcome to join your farmstay. Let us know when you enquire and we will sort the details.",
-            },
-            {
               title: "Local knowledge",
               body: "We know Canterbury inside out. Hiking tracks, wineries, hot springs, gorge walks -- ask us and we will point you in the right direction.",
             },
@@ -230,10 +226,6 @@ export default function FarmstayPage() {
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
                 <span>Discounts available for stays of 3 nights or more</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Dogs may incur an additional charge — ask when enquiring</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>

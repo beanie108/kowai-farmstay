@@ -55,10 +55,6 @@ export default function BookPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                Dogs welcome by arrangement
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-sage mt-0.5">&#10003;</span>
                 Discounts for longer stays
               </li>
             </ul>

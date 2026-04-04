@@ -113,7 +113,6 @@ export default function HomePage() {
             <ul className="flex flex-wrap gap-3 text-xs text-sage">
               <li className="rounded-full bg-sage/15 px-3 py-1">Breakfast included</li>
               <li className="rounded-full bg-sage/15 px-3 py-1">Farm activities</li>
-              <li className="rounded-full bg-sage/15 px-3 py-1">Dogs welcome</li>
             </ul>
             <Link
               href="/farmstay"
