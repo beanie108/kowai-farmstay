@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -14,8 +15,15 @@ export default function FarmstayPage() {
           PAGE HERO
           ═══════════════════════════════════════════════════ */}
       <section className="relative bg-forest py-28 px-4 text-cream">
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/80 to-forest/95" />
-        {/* TODO: Replace with next/image background of the farmstay */}
+        <Image
+          src="/images/farmstay-hero.jpg"
+          alt="Aerial view of Kowai Farmstay house and gardens with Southern Alps in background"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/70 to-forest/90" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-sage mb-4">
             Accommodation
@@ -37,9 +45,14 @@ export default function FarmstayPage() {
           ═══════════════════════════════════════════════════ */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* TODO: Replace with next/image */}
-          <div className="rounded-2xl bg-sage/15 aspect-[4/3] flex items-center justify-center text-sage/40 text-sm order-2 lg:order-1">
-            Farmstay experience photo
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] order-2 lg:order-1">
+            <Image
+              src="/images/living-room.jpg"
+              alt="Warm living room with wood fire at Kowai Farmstay"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
 
           <div className="order-1 lg:order-2 flex flex-col gap-6">
@@ -93,19 +106,16 @@ export default function FarmstayPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {["Dachshunds", "Sheep", "Goats", "Cows", "Alpacas", "Chickens"].map(
-              (animal) => (
-                <div
-                  key={animal}
-                  className="rounded-xl bg-cream border border-warm-brown/10 aspect-square flex flex-col items-center justify-center gap-2"
-                >
-                  {/* TODO: Replace with next/image animal thumbnails */}
-                  <div className="w-14 h-14 rounded-full bg-sage/20" />
-                  <span className="text-sm text-charcoal/60">{animal}</span>
-                </div>
-              )
-            )}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { src: "/images/cows-sheep.jpg", alt: "Cows and sheep grazing in the paddock" },
+              { src: "/images/goats.jpg", alt: "Goats grazing under the trees" },
+              { src: "/images/garden-lawn.jpg", alt: "Lush green lawns and gardens at Kowai" },
+            ].map(({ src, alt }) => (
+              <div key={src} className="relative rounded-xl overflow-hidden aspect-[4/3]">
+                <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+              </div>
+            ))}
           </div>
 
         </div>
@@ -160,6 +170,29 @@ export default function FarmstayPage() {
               <p className="text-sm text-charcoal/70 leading-relaxed">{body}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          PHOTO GALLERY
+          ═══════════════════════════════════════════════════ */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="relative rounded-xl overflow-hidden aspect-[3/4] md:col-span-2 md:row-span-2">
+            <Image src="/images/deck-garden.jpg" alt="Covered deck overlooking lush garden" fill className="object-cover" sizes="(max-width: 768px) 50vw, 50vw" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden aspect-square">
+            <Image src="/images/kitchen.jpg" alt="Modern kitchen at Kowai Farmstay" fill className="object-cover" sizes="25vw" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden aspect-square">
+            <Image src="/images/bedroom-master.jpg" alt="Master bedroom with garden views" fill className="object-cover" sizes="25vw" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden aspect-square">
+            <Image src="/images/bench-mountains.jpg" alt="Bench seat under trees with mountain views" fill className="object-cover" sizes="25vw" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden aspect-square">
+            <Image src="/images/vege-garden.jpg" alt="Raised vegetable garden beds" fill className="object-cover" sizes="25vw" />
+          </div>
         </div>
       </section>
 

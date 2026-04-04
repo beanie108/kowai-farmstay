@@ -24,8 +24,15 @@ export default function HomePage() {
           HERO
           ═══════════════════════════════════════════════════ */}
       <section className="relative flex min-h-[92vh] flex-col items-center justify-center bg-forest px-4 text-center text-cream">
-        {/* TODO: Replace with a next/image hero background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/70 via-forest/85 to-forest/95" />
+        <Image
+          src="/images/hero.jpg"
+          alt="Aerial view of Kowai Farmstay nestled in trees with Canterbury mountains behind"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-forest/75 to-forest/90" />
 
         <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">
           <p className="text-xs uppercase tracking-[0.3em] text-sage">
