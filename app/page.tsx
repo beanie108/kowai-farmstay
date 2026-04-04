@@ -27,7 +27,7 @@ export default function HomePage() {
           </h1>
 
           <p className="max-w-xl text-lg text-cream/80 leading-relaxed">
-            A genuine working farm offering unique farmstay accommodation and
+            A genuine lifestyle block offering unique farmstay accommodation and
             bespoke in-home dog boarding. Whether you are looking for a place to
             stay or a place for your dog to stay, you will find it here.
           </p>
