@@ -210,18 +210,22 @@ export default function FarmstayPage() {
             Pricing
           </h2>
           <p className="text-charcoal/60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Rates vary depending on the season, length of stay, and number of
-            guests. Send us an enquiry with your preferred dates and we will
-            provide a personalised quote within 24 hours.
+            Simple, transparent pricing. Everything you need for a genuine rural lifestyle experience is included.
           </p>
+
+          <div className="flex justify-center mb-6">
+            <div className="rounded-2xl bg-terracotta text-cream px-12 py-10 text-center">
+              <p className="text-xs uppercase tracking-widest text-cream/70 mb-3">Per person, per night</p>
+              <p className="font-heading text-6xl mb-1">$280</p>
+              <p className="text-sm text-cream/70">incl. GST</p>
+            </div>
+          </div>
+
           <div className="rounded-2xl bg-cream border border-warm-brown/15 p-8 text-left">
-            <h3 className="font-heading text-xl text-forest mb-4">
-              What to expect
-            </h3>
             <ul className="flex flex-col gap-3 text-sm text-charcoal/70">
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Nightly rate includes breakfast and farm activities</span>
+                <span>Nightly rate includes breakfast and lifestyle block activities</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
@@ -233,11 +237,11 @@ export default function FarmstayPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Dogs may incur an additional charge -- ask when enquiring</span>
+                <span>Dogs may incur an additional charge — ask when enquiring</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-sage mt-0.5">&#10003;</span>
-                <span>Seasonal pricing applies -- summer and school holidays are peak periods</span>
+                <span>Seasonal pricing applies — summer and school holidays are peak periods</span>
               </li>
             </ul>
           </div>
