@@ -89,6 +89,9 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 border-t border-cream/10 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-cream/40">
           <p>&copy; {currentYear} Kowai Farmstay & Boarding. All rights reserved.</p>
+          <Link href="/terms" className="transition-colors hover:text-cream/70">
+            Terms & Conditions
+          </Link>
           <p>
             Built by{" "}
             <a

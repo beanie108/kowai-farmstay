@@ -415,6 +415,12 @@ export default function DogBoardingPage() {
           >
             Make a Boarding Enquiry
           </Link>
+          <p className="mt-6 text-xs text-cream/50">
+            By making a booking you agree to our{" "}
+            <Link href="/terms" className="underline hover:text-cream/80 transition-colors">
+              Terms & Conditions
+            </Link>
+          </p>
         </div>
       </section>
     </>
