@@ -42,50 +42,36 @@ export async function submitEnquiry(
   }
 
   // ── Email sending ──────────────────────────────────────────────────────────
-  // TODO: Uncomment and complete this block once you have a Resend API key.
-  // Add RESEND_API_KEY and ENQUIRY_EMAIL_TO to Vercel environment variables.
-  //
-  // const res = await fetch("https://api.resend.com/emails", {
-  //   method: "POST",
-  //   headers: {
-  //     Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     from: "enquiries@kowaifarmstay.co.nz",
-  //     to: process.env.ENQUIRY_EMAIL_TO ?? "stay@kowaifarmstay.co.nz",
-  //     reply_to: email,
-  //     subject: `New enquiry from ${name} — ${enquiryType}`,
-  //     text: [
-  //       `Name: ${name}`,
-  //       `Email: ${email}`,
-  //       `Phone: ${phone || "Not provided"}`,
-  //       `Enquiry type: ${enquiryType}`,
-  //       `Check-in: ${checkIn || "TBC"}`,
-  //       `Check-out: ${checkOut || "TBC"}`,
-  //       `Guests: ${guests || "TBC"}`,
-  //       `Dogs: ${dogCount || "TBC"}`,
-  //       `Message: ${message || "None"}`,
-  //     ].join("\n"),
-  //   }),
-  // });
-  //
-  // if (!res.ok) {
-  //   return { success: false, error: "Failed to send enquiry. Please try again or email us directly." };
-  // }
-
-  // Placeholder success until email provider is wired up
-  console.log("Enquiry received (email sending not yet configured):", {
-    name,
-    email,
-    phone,
-    enquiryType,
-    checkIn,
-    checkOut,
-    guests,
-    dogCount,
-    message,
+  // From address uses Resend's shared domain until kowaifarmstay.co.nz is
+  // verified in Resend — then change to: enquiries@kowaifarmstay.co.nz
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "Kowai Farmstay <onboarding@resend.dev>",
+      to: process.env.ENQUIRY_EMAIL_TO ?? "stay@kowaifarmstay.co.nz",
+      reply_to: email,
+      subject: `New enquiry from ${name} — ${enquiryType}`,
+      text: [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone || "Not provided"}`,
+        `Enquiry type: ${enquiryType}`,
+        `Check-in: ${checkIn || "TBC"}`,
+        `Check-out: ${checkOut || "TBC"}`,
+        `Guests: ${guests || "TBC"}`,
+        `Dogs: ${dogCount || "TBC"}`,
+        `Message: ${message || "None"}`,
+      ].join("\n"),
+    }),
   });
+
+  if (!res.ok) {
+    return { success: false, error: "Failed to send enquiry. Please try again or email us directly." };
+  }
 
   return { success: true };
 }
