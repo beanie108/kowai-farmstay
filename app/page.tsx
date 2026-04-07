@@ -13,7 +13,7 @@ const pack = [
 
 const humans = [
   { name: "Ben", bg: "bg-warm-brown/10", src: null as string | null },
-  { name: "Billiejean", bg: "bg-terracotta/10", src: null as string | null },
+  { name: "Billiejean", bg: "bg-terracotta/10", src: "/images/billiejean.jpg" },
   { name: "Rye", bg: "bg-sage/10", src: null as string | null },
 ];
 
