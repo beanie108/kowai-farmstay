@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const pack = [
   { name: "Lump", bg: "bg-terracotta/10", src: "/images/lump.jpg" },
-  { name: "Beanie", bg: "bg-warm-brown/10", src: null },
-  { name: "Kali", bg: "bg-sage/15", src: null },
-  { name: "Ellie-Mae", bg: "bg-terracotta/8", src: null },
+  { name: "Beanie", bg: "bg-warm-brown/10", src: "/images/beanie.jpg" },
+  { name: "Kali", bg: "bg-sage/15", src: "/images/kali.jpg" },
+  { name: "Ellie-Mae", bg: "bg-terracotta/8", src: "/images/ellie-mae.jpg" },
   { name: "Cub", bg: "bg-sage/10", src: "/images/cub.jpg" },
-  { name: "Dax", bg: "bg-forest/10", src: null },
+  { name: "Dax", bg: "bg-forest/10", src: "/images/dax.jpg" },
 ];
 
 export const metadata: Metadata = {
