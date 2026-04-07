@@ -5,12 +5,12 @@ import Link from "next/link";
 const warmFilter = "brightness(0.92) contrast(1.05) saturate(0.75) sepia(0.35)";
 
 const farmAnimals = [
-  { name: "Sheep", bg: "bg-cream/60", src: null as string | null, filter: undefined as string | undefined },
+  { name: "Sheep", bg: "bg-cream/60", src: "/images/sheep.jpg", filter: undefined as string | undefined },
   { name: "Goats", bg: "bg-sage/10", src: "/images/goats.jpg", filter: undefined },
-  { name: "Alpacas", bg: "bg-warm-brown/10", src: null as string | null, filter: undefined as string | undefined },
-  { name: "Chickens", bg: "bg-terracotta/8", src: null as string | null, filter: undefined as string | undefined },
+  { name: "Alpacas", bg: "bg-warm-brown/10", src: "/images/alpacas.jpg", filter: undefined as string | undefined },
+  { name: "Chickens", bg: "bg-terracotta/8", src: "/images/chickens.jpg", filter: undefined as string | undefined },
   { name: "Cows", bg: "bg-forest/10", src: "/images/cows.jpg", filter: undefined },
-  { name: "Birds", bg: "bg-sage/15", src: null as string | null, filter: undefined as string | undefined },
+  { name: "Birds", bg: "bg-sage/15", src: "/images/birds.jpg", filter: undefined as string | undefined },
 ];
 
 const pack = [
@@ -208,8 +208,10 @@ export default function HomePage() {
                       sizes="(max-width: 640px) 33vw, (max-width: 1024px) 33vw, 25vw"
                       style={filter ? { filter } : undefined}
                     />
-                    <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
-                      {name}
+                    <span className="absolute bottom-2 left-0 right-0 flex justify-center z-10">
+                      <span className="text-xs font-semibold text-white px-2.5 py-0.5 rounded-full" style={{ background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)' }}>
+                        {name}
+                      </span>
                     </span>
                   </>
                 ) : (
@@ -239,8 +241,10 @@ export default function HomePage() {
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                       style={filter ? { filter } : undefined}
                     />
-                    <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
-                      {name}
+                    <span className="absolute bottom-2 left-0 right-0 flex justify-center z-10">
+                      <span className="text-xs font-semibold text-white px-2.5 py-0.5 rounded-full" style={{ background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)' }}>
+                        {name}
+                      </span>
                     </span>
                   </>
                 ) : (
@@ -270,8 +274,10 @@ export default function HomePage() {
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                       style={filter ? { filter } : undefined}
                     />
-                    <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
-                      {name}
+                    <span className="absolute bottom-2 left-0 right-0 flex justify-center z-10">
+                      <span className="text-xs font-semibold text-white px-2.5 py-0.5 rounded-full" style={{ background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)' }}>
+                        {name}
+                      </span>
                     </span>
                   </>
                 ) : (
@@ -381,6 +387,13 @@ export default function HomePage() {
                 ],
                 author: "S.T — Japan 🇯🇵",
                 tag: "Farmstay",
+              },
+              {
+                paragraphs: [
+                  "Our senior mini dachshund Penny and our younger mischievous Ester love their country holiday stays at Kowai Farmstay & Boarding. They look forward to joining the team and are treated like royalty. We wouldn't have them stay anywhere else as we can relax on holiday knowing they are being well cared for.",
+                ],
+                author: "Valerie & Steve Jones",
+                tag: "Dog Boarding",
               },
             ].map(({ paragraphs, author, tag }) => (
               <blockquote
