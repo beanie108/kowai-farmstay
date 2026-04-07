@@ -2,19 +2,30 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+const warmFilter = "brightness(0.92) contrast(1.05) saturate(0.75) sepia(0.35)";
+
+const farmAnimals = [
+  { name: "Sheep", bg: "bg-cream/60", src: null as string | null, filter: undefined as string | undefined },
+  { name: "Goats", bg: "bg-sage/10", src: "/images/goats.jpg", filter: undefined },
+  { name: "Alpacas", bg: "bg-warm-brown/10", src: null as string | null, filter: undefined as string | undefined },
+  { name: "Chickens", bg: "bg-terracotta/8", src: null as string | null, filter: undefined as string | undefined },
+  { name: "Cows", bg: "bg-forest/10", src: "/images/cows.jpg", filter: undefined },
+  { name: "Birds", bg: "bg-sage/15", src: null as string | null, filter: undefined as string | undefined },
+];
+
 const pack = [
-  { name: "Lump", bg: "bg-terracotta/10", src: "/images/lump.jpg" },
-  { name: "Beanie", bg: "bg-warm-brown/10", src: "/images/beanie.jpg" },
-  { name: "Kali", bg: "bg-sage/15", src: "/images/kali.jpg" },
-  { name: "Ellie-Mae", bg: "bg-terracotta/8", src: "/images/ellie-mae.jpg" },
-  { name: "Cub", bg: "bg-sage/10", src: "/images/cub.jpg" },
-  { name: "Dax", bg: "bg-forest/10", src: "/images/dax.jpg" },
+  { name: "Lump", bg: "bg-terracotta/10", src: "/images/lump.jpg", filter: undefined },
+  { name: "Beanie", bg: "bg-warm-brown/10", src: "/images/beanie.jpg", filter: undefined },
+  { name: "Kali", bg: "bg-sage/15", src: "/images/kali.jpg", filter: undefined },
+  { name: "Ellie-Mae", bg: "bg-terracotta/8", src: "/images/ellie-mae.jpg", filter: undefined },
+  { name: "Cub", bg: "bg-sage/10", src: "/images/cub.jpg", filter: undefined },
+  { name: "Dax", bg: "bg-forest/10", src: "/images/dax.jpg", filter: warmFilter },
 ];
 
 const humans = [
-  { name: "Ben", bg: "bg-warm-brown/10", src: "/images/ben.jpg" },
-  { name: "Billiejean", bg: "bg-terracotta/10", src: "/images/billiejean.jpg" },
-  { name: "Rye", bg: "bg-sage/10", src: "/images/rye.jpg" },
+  { name: "Ben", bg: "bg-warm-brown/10", src: "/images/ben.jpg", filter: undefined },
+  { name: "Billiejean", bg: "bg-terracotta/10", src: "/images/billiejean.jpg", filter: undefined },
+  { name: "Rye", bg: "bg-sage/10", src: "/images/rye.jpg", filter: undefined },
 ];
 
 export const metadata: Metadata = {
@@ -182,7 +193,7 @@ export default function HomePage() {
 
           {/* The people */}
           <div className="grid grid-cols-3 gap-4 mb-4">
-            {humans.map(({ name, bg, src }) => (
+            {humans.map(({ name, bg, src, filter }) => (
               <div
                 key={name}
                 className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2 overflow-hidden relative`}
@@ -195,6 +206,7 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, (max-width: 1024px) 33vw, 25vw"
+                      style={filter ? { filter } : undefined}
                     />
                     <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
                       {name}
@@ -212,7 +224,7 @@ export default function HomePage() {
 
           {/* The pack */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {pack.map(({ name, bg, src }) => (
+            {pack.map(({ name, bg, src, filter }) => (
               <div
                 key={name}
                 className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2 overflow-hidden relative`}
@@ -225,6 +237,38 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                      style={filter ? { filter } : undefined}
+                    />
+                    <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
+                      {name}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-16 h-16 rounded-full bg-white/40" />
+                    <span className="text-sm font-medium text-charcoal/70">{name}</span>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* The farm animals */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-4">
+            {farmAnimals.map(({ name, bg, src, filter }) => (
+              <div
+                key={name}
+                className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2 overflow-hidden relative`}
+              >
+                {src ? (
+                  <>
+                    <Image
+                      src={src}
+                      alt={name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                      style={filter ? { filter } : undefined}
                     />
                     <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
                       {name}
