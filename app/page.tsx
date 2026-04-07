@@ -11,6 +11,12 @@ const pack = [
   { name: "Dax", bg: "bg-forest/10", src: "/images/dax.jpg" },
 ];
 
+const humans = [
+  { name: "Ben", bg: "bg-warm-brown/10", src: null as string | null },
+  { name: "Billiejean", bg: "bg-terracotta/10", src: null as string | null },
+  { name: "Rye", bg: "bg-sage/10", src: null as string | null },
+];
+
 export const metadata: Metadata = {
   title: "Home",
   description:
@@ -170,10 +176,41 @@ export default function HomePage() {
               Meet the locals
             </h2>
             <p className="mt-4 text-charcoal/60 max-w-lg mx-auto">
-              Meet Lump, Beanie, Kali, Ellie-Mae, Cub and Dax — the heart of the pack at Kowai.
+              The people and the pack who call Kowai home.
             </p>
           </div>
 
+          {/* The people */}
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            {humans.map(({ name, bg, src }) => (
+              <div
+                key={name}
+                className={`${bg} rounded-xl aspect-square flex flex-col items-center justify-center gap-2 overflow-hidden relative`}
+              >
+                {src ? (
+                  <>
+                    <Image
+                      src={src}
+                      alt={name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 33vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                    <span className="absolute bottom-2 left-0 right-0 text-center text-sm font-medium text-cream drop-shadow-md z-10">
+                      {name}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-16 h-16 rounded-full bg-white/40" />
+                    <span className="text-sm font-medium text-charcoal/70">{name}</span>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* The pack */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {pack.map(({ name, bg, src }) => (
               <div
