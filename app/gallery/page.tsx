@@ -29,9 +29,16 @@ const farmstayPhotos = [
 ];
 
 const dogPhotos = [
-  { src: "/images/dogs.jpg", alt: "The miniature dachshund pack at Kowai" },
+  { src: "/images/pack-group.jpg", alt: "The miniature dachshund pack at Kowai" },
+  { src: "/images/pack-together.jpg", alt: "The pack together at Kowai" },
+  { src: "/images/pack-looking-up.jpg", alt: "Dachshunds looking up at Kowai" },
+  { src: "/images/pack-duo.jpg", alt: "Two dachshunds from the Kowai pack" },
+  { src: "/images/beanie.jpg", alt: "Beanie the miniature dachshund on a skateboard" },
+  { src: "/images/kali.jpg", alt: "Kali the miniature dachshund" },
+  { src: "/images/ellie-mae.jpg", alt: "Ellie-Mae the miniature dachshund" },
+  { src: "/images/dax.jpg", alt: "Dax relaxing on the armchair" },
   { src: "/images/lump.jpg", alt: "Lump the miniature dachshund" },
-  { src: "/images/cub.jpg", alt: "Cub at Kowai Farmstay" },
+  { src: "/images/cub.jpg", alt: "Cub the miniature dachshund" },
 ];
 
 const animalPhotos = [
