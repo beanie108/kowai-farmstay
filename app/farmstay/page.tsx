@@ -141,10 +141,10 @@ export default function FarmstayPage() {
           {[
             {
               title: "Comfortable guest room",
-              body: "Clean, well-appointed rooms with quality linen, farm views, and everything you need for a restful stay. Warm in winter, cool in summer.",
+              body: "Clean, well-appointed room with quality linen, farm feel, and everything you need for a restful stay. Warm in winter, cool in summer.",
             },
             {
-              title: "Home-cooked breakfast",
+              title: "Breakfast, Lunch, Dinner + Snacks",
               body: "A proper breakfast every morning. Fresh eggs from our chickens, local bread, seasonal fruit, good coffee. Set you up for the day.",
             },
             {
