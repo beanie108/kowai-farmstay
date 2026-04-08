@@ -140,7 +140,7 @@ export default function FarmstayPage() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: "Comfortable guest rooms",
+              title: "Comfortable guest room",
               body: "Clean, well-appointed rooms with quality linen, farm views, and everything you need for a restful stay. Warm in winter, cool in summer.",
             },
             {
