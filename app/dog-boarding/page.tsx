@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AvailabilityCalendar from "@/components/AvailabilityCalendar";
-import { dogBoardingBookings } from "@/data/availability";
+import BoardingApplicationForm from "@/components/BoardingApplicationForm";
 
 export const metadata: Metadata = {
   title: "Dog Boarding",
@@ -361,26 +360,21 @@ export default function DogBoardingPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          AVAILABILITY CALENDAR
+          BOARDING ENQUIRY FORM
           ═══════════════════════════════════════════════════ */}
-      <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-warm-brown/20 bg-terracotta/5 p-8 sm:p-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-terracotta mb-2">
-            Availability
-          </p>
-          <h2 className="font-heading text-3xl text-forest mb-3">
-            Check boarding availability
-          </h2>
-          <p className="text-sm text-charcoal/60 mb-8">
-            We keep numbers small so every dog gets proper attention. Check
-            available dates below, then send an enquiry to secure your spot.
-          </p>
-
-          <AvailabilityCalendar
-            bookedRanges={dogBoardingBookings}
-            label="Dog boarding availability"
-          />
-        </div>
+      <section className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8">
+        <p className="text-xs uppercase tracking-[0.25em] text-terracotta mb-2">
+          Book a stay
+        </p>
+        <h2 className="font-heading text-3xl text-forest mb-3">
+          Boarding enquiry
+        </h2>
+        <p className="text-sm text-charcoal/60 mb-8">
+          Fill in the details below and we will confirm availability and get
+          back to you within 24 hours. The more you tell us, the better we
+          can prepare for your dog&apos;s stay.
+        </p>
+        <BoardingApplicationForm />
       </section>
 
       {/* ═══════════════════════════════════════════════════
@@ -438,12 +432,20 @@ export default function DogBoardingPage() {
             Spots are limited. Send us an enquiry with your dates and your
             dog&apos;s details, and we will get back to you within 24 hours.
           </p>
-          <Link
-            href="/book"
-            className="inline-block rounded-full bg-cream px-8 py-3.5 text-sm font-medium text-terracotta shadow transition-colors hover:bg-cream/90"
-          >
-            Make a Boarding Enquiry
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/book"
+              className="inline-block rounded-full bg-cream px-8 py-3.5 text-sm font-medium text-terracotta shadow transition-colors hover:bg-cream/90"
+            >
+              Make a Boarding Enquiry
+            </Link>
+            <Link
+              href="/boarding-application"
+              className="inline-block rounded-full border border-cream/60 px-8 py-3.5 text-sm font-medium text-cream transition-colors hover:bg-cream/10"
+            >
+              Submit a boarding application
+            </Link>
+          </div>
           <p className="mt-6 text-xs text-cream/50">
             By making a booking you agree to our{" "}
             <Link href="/terms" className="underline hover:text-cream/80 transition-colors">
