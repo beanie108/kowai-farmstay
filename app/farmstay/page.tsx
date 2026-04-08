@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import AvailabilityCalendar from "@/components/AvailabilityCalendar";
-import { farmstayBookings } from "@/data/availability";
+import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
   title: "Farmstay Accommodation",
@@ -237,26 +236,20 @@ export default function FarmstayPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          AVAILABILITY CALENDAR
+          ENQUIRY FORM
           ═══════════════════════════════════════════════════ */}
-      <section className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-warm-brown/20 bg-sage/5 p-8 sm:p-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-terracotta mb-2">
-            Availability
-          </p>
-          <h2 className="font-heading text-3xl text-forest mb-3">
-            Check available dates
-          </h2>
-          <p className="text-sm text-charcoal/60 mb-8">
-            See what dates are open below. To book, send us an enquiry with your
-            preferred dates and we will confirm within 24 hours.
-          </p>
-
-          <AvailabilityCalendar
-            bookedRanges={farmstayBookings}
-            label="Farmstay availability"
-          />
-        </div>
+      <section className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8">
+        <p className="text-xs uppercase tracking-[0.25em] text-terracotta mb-2">
+          Enquire
+        </p>
+        <h2 className="font-heading text-3xl text-forest mb-3">
+          Make a farmstay enquiry
+        </h2>
+        <p className="text-sm text-charcoal/60 mb-8">
+          Tell us your preferred dates and we will confirm availability and get
+          back to you within 24 hours.
+        </p>
+        <EnquiryForm />
       </section>
 
       {/* ═══════════════════════════════════════════════════
