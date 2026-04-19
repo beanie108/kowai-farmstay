@@ -224,7 +224,7 @@ export default function DogBoardingPage() {
             <p className="text-charcoal/70 leading-relaxed">
               Our pack is fed premium ACANA dry food — one of the highest quality
               dog food brands available in New Zealand. We rotate between two
-              varieties depending on the season and each dog's needs.
+              varieties depending on the season and each dog&apos;s needs.
             </p>
             <p className="text-charcoal/70 leading-relaxed">
               If your dog has a specific diet, food sensitivities, or you prefer
@@ -254,7 +254,7 @@ export default function DogBoardingPage() {
               </div>
             ))}
             <p className="text-xs text-charcoal/40 mt-1">
-              All food is served to your dog's regular portion size and schedule.
+              All food is served to your dog&apos;s regular portion size and schedule.
             </p>
           </div>
         </div>

@@ -10,13 +10,10 @@ export interface EnquiryFormState {
 /**
  * Server Action: handles enquiry form submission.
  *
- * Current implementation: sends email via a simple fetch to a transactional
- * email service. In Phase 1 this is a placeholder — wire up Resend, Postmark,
- * or similar and add RESEND_API_KEY (or equivalent) to Vercel environment vars.
- *
- * Required environment variables (add to Vercel project settings):
- *   ENQUIRY_EMAIL_TO   — destination address, e.g. stay@kowaifarmstay.co.nz
- *   RESEND_API_KEY     — if using Resend (recommended)
+ * Sends email via Resend (`https://api.resend.com/emails`). Configure in
+ * deployment environment (e.g. Vercel):
+ *   RESEND_API_KEY   — required; without it the API returns 401 and the user sees an error
+ *   ENQUIRY_EMAIL_TO — optional; defaults to stay@kowaifarmstay.co.nz
  */
 export async function submitEnquiry(
   _prevState: EnquiryFormState,
