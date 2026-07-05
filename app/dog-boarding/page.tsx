@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BoardingApplicationForm from "@/components/BoardingApplicationForm";
 
@@ -15,8 +16,15 @@ export default function DogBoardingPage() {
           PAGE HERO
           ═══════════════════════════════════════════════════ */}
       <section className="relative bg-forest py-28 px-4 text-cream">
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/80 to-forest/95" />
-        {/* TODO: Replace with next/image of dogs on the farm */}
+        <Image
+          src="/images/pack-group.jpg"
+          alt="The miniature dachshund pack at Kowai Farmstay"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/70 to-forest/90" />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-sage mb-4">
             Dog Boarding
@@ -66,9 +74,14 @@ export default function DogBoardingPage() {
             </div>
           </div>
 
-          {/* TODO: Replace with next/image */}
-          <div className="rounded-2xl bg-terracotta/10 aspect-[4/3] flex items-center justify-center text-terracotta/30 text-sm">
-            Dogs on the farm photo
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+            <Image
+              src="/images/dogs-together-2.jpg"
+              alt="The pack together on the farm at Kowai"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>
