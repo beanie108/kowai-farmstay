@@ -1,5 +1,7 @@
 "use server";
 
+import { sendTransactionalEmail } from "@/lib/resend";
+
 export interface BoardingApplicationFormState {
   success: boolean;
   error?: string;
@@ -38,53 +40,41 @@ export async function submitBoardingApplication(
     return { success: false, error: "Please accept the terms and conditions to submit the form." };
   }
 
-  // ── Email sending ──────────────────────────────────────────────────────────
-  // From address uses Resend's shared domain until kowaifarmstay.co.nz is
-  // verified in Resend — then change to: enquiries@kowaifarmstay.co.nz
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from: "Kowai Farmstay <onboarding@resend.dev>",
-      to: process.env.ENQUIRY_EMAIL_TO ?? "stay@kowaifarmstay.co.nz",
-      reply_to: ownerEmail,
-      subject: `New boarding application — ${dogName} (${ownerFirstName} ${ownerLastName})`,
-      text: [
-        `--- Owner ---`,
-        `First name: ${ownerFirstName}`,
-        `Last name: ${ownerLastName}`,
-        `Phone: ${ownerPhone}`,
-        `Email: ${ownerEmail}`,
-        ``,
-        `--- Dog ---`,
-        `Name: ${dogName}`,
-        `Breed: ${dogBreed || "Not provided"}`,
-        `Age: ${dogAge || "Not provided"}`,
-        `Weight: ${dogWeight ? dogWeight + " kg" : "Not provided"}`,
-        `Check-in: ${checkIn}`,
-        `Check-out: ${checkOut}`,
-        ``,
-        `--- Health & care ---`,
-        `Vaccinations up to date: ${vaccinationsUpToDate}`,
-        `Medical conditions: ${medicalConditions || "None"}`,
-        `Allergies: ${allergies || "None"}`,
-        `Vet / clinic: ${vetClinic || "Not provided"}`,
-        ``,
-        `--- Emergency contact ---`,
-        `Name: ${emergencyContactName || "Not provided"}`,
-        `Phone: ${emergencyContactPhone || "Not provided"}`,
-        ``,
-        `--- Special instructions ---`,
-        `${specialInstructions || "None"}`,
-      ].join("\n"),
-    }),
+  const result = await sendTransactionalEmail({
+    replyTo: ownerEmail,
+    subject: `New boarding application — ${dogName} (${ownerFirstName} ${ownerLastName})`,
+    text: [
+      `--- Owner ---`,
+      `First name: ${ownerFirstName}`,
+      `Last name: ${ownerLastName}`,
+      `Phone: ${ownerPhone}`,
+      `Email: ${ownerEmail}`,
+      ``,
+      `--- Dog ---`,
+      `Name: ${dogName}`,
+      `Breed: ${dogBreed || "Not provided"}`,
+      `Age: ${dogAge || "Not provided"}`,
+      `Weight: ${dogWeight ? dogWeight + " kg" : "Not provided"}`,
+      `Check-in: ${checkIn}`,
+      `Check-out: ${checkOut}`,
+      ``,
+      `--- Health & care ---`,
+      `Vaccinations up to date: ${vaccinationsUpToDate}`,
+      `Medical conditions: ${medicalConditions || "None"}`,
+      `Allergies: ${allergies || "None"}`,
+      `Vet / clinic: ${vetClinic || "Not provided"}`,
+      ``,
+      `--- Emergency contact ---`,
+      `Name: ${emergencyContactName || "Not provided"}`,
+      `Phone: ${emergencyContactPhone || "Not provided"}`,
+      ``,
+      `--- Special instructions ---`,
+      `${specialInstructions || "None"}`,
+    ].join("\n"),
   });
 
-  if (!res.ok) {
-    return { success: false, error: "Failed to send application. Please try again or email us directly." };
+  if (!result.ok) {
+    return { success: false, error: result.error };
   }
 
   return { success: true };
